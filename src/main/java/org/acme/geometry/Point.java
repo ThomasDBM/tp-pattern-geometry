@@ -27,4 +27,10 @@ public class Point implements Geometry {
         }
         return isEmpty;
     }
+
+    public void translate(double dx, double dy){
+        double newX = this.coordinate.getX()+dx;
+        double newY = this.coordinate.getY()+dy;
+        this.coordinate = new Coordinate(newX,newY);
+    }
 }

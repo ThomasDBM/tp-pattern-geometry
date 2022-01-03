@@ -44,5 +44,16 @@ public class LineStringTest {
 		Assert.assertTrue(l1.isEmpty());
 		Assert.assertFalse(l.isEmpty());
 	}
+
+	@Test
+	public void testTranslate(){
+        List<Point> p = PointFactory.createPointsOA();
+		LineString l = new LineString(p);
+		l.translate(1.0, 1.0);
+		Assert.assertEquals(1.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(1.0, l.getPointN(0).getCoordinate().getY(), EPSILON);
+		Assert.assertEquals(2.0, l.getPointN(1).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(2.0, l.getPointN(1).getCoordinate().getY(), EPSILON);
+	}
 }
 
