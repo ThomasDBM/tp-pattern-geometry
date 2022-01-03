@@ -2,7 +2,7 @@ package org.acme.geometry;
 
 public class Point implements Geometry {
     
-    public Coordinate coordinate;
+    private Coordinate coordinate;
 
     Point(){
         this.coordinate = new Coordinate();
@@ -14,5 +14,9 @@ public class Point implements Geometry {
 
     public String getType(){
         return("Point");
+    }
+
+    public Coordinate getCoordinate(){
+        return coordinate;
     }
 }
