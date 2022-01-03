@@ -1,6 +1,7 @@
 package org.acme.geometry;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -17,22 +18,16 @@ public class LineStringTest {
 
     @Test
 	public void testGetNumPoint(){
-		Coordinate c = new Coordinate(1.0,1.0);
-        Point p = new Point(c);
-        ArrayList<Point> ps = new ArrayList<Point>();
-        ps.add(p);
+        List<Point> ps = PointFactory.createPointsOA();
         LineString l = new LineString(ps);
-        Assert.assertEquals(1,l.getNumPoints());
+        Assert.assertEquals(2,l.getNumPoints());
 	}
 
 	@Test
 	public void testConstructor(){
-		Coordinate c = new Coordinate(1.0,1.0);
-        Point p = new Point(c);
-        ArrayList<Point> ps = new ArrayList<Point>();
-        ps.add(p);
+		List<Point> ps = PointFactory.createPointsOA();
         LineString l = new LineString(ps);
-		Assert.assertEquals(1.0, l.getPointN(0).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(1.0, l.getPointN(1).getCoordinate().getX(), EPSILON);
 	}
 
     @Test
