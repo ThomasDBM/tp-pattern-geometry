@@ -1,6 +1,5 @@
 package org.acme.geometry;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
@@ -35,5 +34,15 @@ public class LineStringTest {
 		LineString l = new LineString();
 		Assert.assertEquals("LineString", l.getType());
     }
+
+	@Test
+	public void testisEmpty(){
+		List<Point> ps = PointFactory.createPointsOA();
+		LineString l = new LineString(ps);
+		LineString l1 = new LineString();
+
+		Assert.assertTrue(l1.isEmpty());
+		Assert.assertFalse(l.isEmpty());
+	}
 }
 

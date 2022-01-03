@@ -5,6 +5,11 @@ import java.util.List;
 
 public class PointFactory {
 
+    public static Point createEmptyPoint(){
+        Point point = new Point();
+        return point;
+    }
+
     public static Point createPointO(){
         Coordinate c = new Coordinate(0.0,0.0);
         Point point = new Point(c);

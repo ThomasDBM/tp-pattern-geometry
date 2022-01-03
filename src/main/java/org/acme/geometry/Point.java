@@ -19,4 +19,12 @@ public class Point implements Geometry {
     public Coordinate getCoordinate(){
         return coordinate;
     }
+
+    public Boolean isEmpty(){
+        Boolean isEmpty = false;
+        if (Double.isNaN(this.coordinate.getX()) && Double.isNaN(this.coordinate.getY())){
+            isEmpty = true;
+        }
+        return isEmpty;
+    }
 }
