@@ -41,4 +41,13 @@ public class LineString implements Geometry {
         }
     }
 
+    public LineString clone(){
+        LineString newLineString = new LineString();
+        for (Point point : points) {
+            Point p = point.clone();
+            newLineString.points.add(p);
+        }
+        return newLineString;
+    }
+
 }

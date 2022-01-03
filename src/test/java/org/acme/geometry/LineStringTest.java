@@ -55,5 +55,17 @@ public class LineStringTest {
 		Assert.assertEquals(2.0, l.getPointN(1).getCoordinate().getX(), EPSILON);
 		Assert.assertEquals(2.0, l.getPointN(1).getCoordinate().getY(), EPSILON);
 	}
+
+	@Test
+	public void testClone(){
+        List<Point> p = PointFactory.createPointsOA();
+		LineString l = new LineString(p);
+		LineString l1 = l.clone();
+		l.translate(1.0, 1.0);
+		Assert.assertEquals(0.0, l1.getPointN(0).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(0.0, l1.getPointN(0).getCoordinate().getY(), EPSILON);
+		Assert.assertEquals(1.0, l1.getPointN(1).getCoordinate().getX(), EPSILON);
+		Assert.assertEquals(1.0, l1.getPointN(1).getCoordinate().getY(), EPSILON);
+	}
 }
 

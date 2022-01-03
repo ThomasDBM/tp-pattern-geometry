@@ -33,4 +33,10 @@ public class Point implements Geometry {
         double newY = this.coordinate.getY()+dy;
         this.coordinate = new Coordinate(newX,newY);
     }
+
+    public Point clone(){
+        Coordinate newCoordinate = new Coordinate(this.coordinate.getX(), this.coordinate.getY());
+        Point newPoint = new Point (newCoordinate);
+        return newPoint;
+    }
 }
