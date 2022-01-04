@@ -6,8 +6,13 @@ import java.util.List;
 
 public class EnvelopeBuilder {
     
-    private List<Double> xVals = new ArrayList<Double>();
-    private List<Double> yVals = new ArrayList<Double>();
+    private List<Double> xVals;
+    private List<Double> yVals;
+
+    EnvelopeBuilder(){
+        xVals = new ArrayList<Double>();
+        yVals = new ArrayList<Double>();
+    }
 
     public void insert(Coordinate coordinate){
         this.xVals.add(coordinate.getX());

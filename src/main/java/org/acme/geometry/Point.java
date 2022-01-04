@@ -39,4 +39,10 @@ public class Point implements Geometry {
         Point newPoint = new Point (newCoordinate);
         return newPoint;
     }
+
+    public Envelope getEnvelope(){
+        EnvelopeBuilder builder = new EnvelopeBuilder();
+        builder.insert(this.coordinate);
+        return builder.build();
+    }
 }
