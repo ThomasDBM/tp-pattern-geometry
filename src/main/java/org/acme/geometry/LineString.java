@@ -16,7 +16,7 @@ public class LineString implements Geometry {
     }
 
     public String getType(){
-        return "LineString" ;
+        return "LINESTRING" ;
     }
 
     public int getNumPoints(){

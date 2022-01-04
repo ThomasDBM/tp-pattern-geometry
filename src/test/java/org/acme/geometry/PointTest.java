@@ -24,7 +24,7 @@ public class PointTest {
 	@Test
 	public void testGetType(){
         Point p = PointFactory.createEmptyPoint();
-		Assert.assertEquals("Point", p.getType());
+		Assert.assertEquals("POINT", p.getType());
 	}
 
 	@Test
